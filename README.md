@@ -16,3 +16,8 @@ or
 ```bash
 touch requirements.txt
 ```
+
+add the dependencies and install the dependencies
+```bash
+pip install -r requirements.txt
+```
