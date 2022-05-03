@@ -1,5 +1,6 @@
 dvc
 dvc[gdrive]
 sklearn
+pandas 
 certifi==2021.10.8
 wincertstore==0.2
