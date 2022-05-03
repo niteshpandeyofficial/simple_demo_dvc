@@ -25,11 +25,11 @@ pip install -r requirements.txt
 Git and dvc commands
 
 ```bash
-
 git init
-dvc init
-
-dvc add data_given/winequality.csv
+git add .
 git commit -m "<msg_name>"
 
+dvc init
+dvc add data_given/winequality.csv
+git push origin main
 ```
