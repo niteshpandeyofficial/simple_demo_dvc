@@ -33,3 +33,10 @@ dvc init
 dvc add data_given/winequality.csv
 git push origin main
 ```
+
+Some DVC commands to check the details
+```bash
+dvc params diff
+dvc metrics show
+dvc metrics diff
+```

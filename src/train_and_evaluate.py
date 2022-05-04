@@ -6,7 +6,7 @@ import json
 import numpy as np
 from sklearn.linear_model import ElasticNet
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error,mean_absolute_error,r2_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from urllib.parse import urlparse
 from get_data import read_params
 
@@ -14,7 +14,7 @@ from get_data import read_params
 def eval_matrics(actual,prediction):
     mse=mean_squared_error(actual,prediction)
     rmse=np.sqrt(mse)
-    r2=r2_error(actual,prediction)
+    r2=r2_score(actual,prediction)
     return (mse,rmse,r2)
 
 
@@ -47,6 +47,28 @@ def train_and_evaluate(config_path):
     (mse,rmse,r2)=eval_matrics(test_y,predicted_qualities)
     print(f"value of mse:{mse} ,rmse:{rmse},r2:{r2}")
 
+    param_file=config["reports"]["params"]
+    score_file=config["reports"]["scores"]
+    
+    with open(score_file,"w") as f:
+        score={
+            "mse":mse,
+            "rmse":rmse,
+            "r2":r2
+        }
+        json.dump(score, f, indent=4)
+    
+    with open(param_file,"w") as f:
+        params={
+            "alpha":alpha,
+            "l1_ratio":l1_ratio
+        }
+        json.dump(params, f, indent=4)
+
+    os.makedirs(model_dir, exist_ok=True)
+    model_path = os.path.join(model_dir, "model.joblib")
+
+    joblib.dump(lr, model_path)
 
 
 
