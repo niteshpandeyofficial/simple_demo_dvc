@@ -1,4 +1,6 @@
-Create new conda environment for this project using below commands.
+### Basic command 
+
+Create new conda environment commands.
 ```bash
 conda activate -n <virtual_env_name>
 ```
@@ -17,7 +19,7 @@ or
 touch requirements.txt
 ```
 
-add the dependencies and install the dependencies
+Add the dependencies and install the dependencies
 ```bash
 pip install -r requirements.txt
 ```
