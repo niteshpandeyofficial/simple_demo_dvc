@@ -12,3 +12,5 @@ pytest
 tox
 certifi==2021.10.8
 wincertstore==0.2
+flake8
+flask
