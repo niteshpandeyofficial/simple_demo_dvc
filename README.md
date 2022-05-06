@@ -1,4 +1,11 @@
 ### Basic command 
+ Tools used in this project
+```
+dvc
+git
+tox
+pytest
+```
 
 Create new conda environment commands.
 ```bash
@@ -42,3 +49,9 @@ dvc params diff
 dvc metrics show
 dvc metrics diff
 ```
+
+```bash
+pip install -e .
+```
+
+
