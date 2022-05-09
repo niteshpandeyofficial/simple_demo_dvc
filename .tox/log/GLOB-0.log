@@ -1,6 +1,6 @@
 action: GLOB, msg: packaging
 cwd: D:\aiops_series\simple_app_demo
-cmd: 'C:\Users\nites\.conda\envs\simple_demo_dvc\python.exe' setup.py sdist --formats=zip --dist-dir 'D:\aiops_series\simple_app_demo\.tox\dist'
+cmd: 'C:\Users\nites\.conda\envs\simple_demo_dvc\python.exe' setup.py sdist --formats=zip --dist-dir '.tox\dist'
 running sdist
 running egg_info
 writing src.egg-info\PKG-INFO
@@ -31,8 +31,7 @@ copying src.egg-info\dependency_links.txt -> src-0.0\src.egg-info
 copying src.egg-info\top_level.txt -> src-0.0\src.egg-info
 copying test\test_config.py -> src-0.0\test
 Writing src-0.0\setup.cfg
-creating D:\aiops_series\simple_app_demo\.tox\dist
-creating 'D:\aiops_series\simple_app_demo\.tox\dist\src-0.0.zip' and adding 'src-0.0' to it
+creating '.tox\dist\src-0.0.zip' and adding 'src-0.0' to it
 adding 'src-0.0'
 adding 'src-0.0\src'
 adding 'src-0.0\src.egg-info'
