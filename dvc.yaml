@@ -40,7 +40,7 @@ stages:
     # outs:
     # - saved_models/model.joblib
 
-    # log_production_model:
-    # cmd: python src/train_and_evaluate.py --config=params.yaml 
-    # deps:
-    # -src/lpg_production_model.py
+  log_production_model:
+    cmd: python src/train_and_evaluate.py --config=params.yaml 
+    deps:
+    - src/log_production_model.py

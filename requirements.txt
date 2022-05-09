@@ -15,4 +15,3 @@ wincertstore==0.2
 flake8
 flask
 gunicorn
-mlfow
