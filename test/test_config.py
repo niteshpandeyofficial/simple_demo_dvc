@@ -3,8 +3,8 @@ import logging
 import os
 import joblib
 import pytest
-from prediction_service.prediction import form_response, api_response
-
+# from prediction_service.prediction import form_response, api_response
+import prediction_service
 
 input_data = {
     "incorrect_range": 
@@ -56,11 +56,11 @@ TARGET_range = {
 }
 
 def test_form_response_correct_range(data=input_data["correct_range"]):
-    res = form_response(data)
+    res = prediction_service.prediction.form_response(data)
     assert  TARGET_range["min"] <= res <= TARGET_range["max"]
 
 def test_api_response_correct_range(data=input_data["correct_range"]):
-    res = api_response(data)
+    res = prediction_service.prediction.api_response(data)
     assert  TARGET_range["min"] <= res["response"] <= TARGET_range["max"]
 
 def test_form_response_incorrect_range(data=input_data["incorrect_range"]):
