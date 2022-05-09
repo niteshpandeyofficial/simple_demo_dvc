@@ -31,11 +31,16 @@ stages:
     - estimator.ElasticNet.params.alphas
     - estimator.ElasticNet.params.l1_ratio
 
-    metrics:
-    - report/scores.json:
-        cache: false
-    - report/param.json:
-        cache: false
+    # metrics:
+    # - report/scores.json:
+    #     cache: false
+    # - report/param.json:
+    #     cache: false
 
-    outs:
-    - saved_models/model.joblib
+    # outs:
+    # - saved_models/model.joblib
+
+    # log_production_model:
+    # cmd: python src/train_and_evaluate.py --config=params.yaml 
+    # deps:
+    # -src/lpg_production_model.py

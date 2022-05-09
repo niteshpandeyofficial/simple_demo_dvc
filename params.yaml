@@ -18,10 +18,10 @@ split_data:
 estimator:
   ElasticNet:
     params:
-      alphas: 0.78
-      l1_ratio: 0.69
-#     alphas: 0.88
-#      l1_ratio: 0.89
+      # alphas: 0.78
+      # l1_ratio: 0.69
+      alphas: 0.88
+      l1_ratio: 0.89
 
 model_dir : saved_models  
 
@@ -30,3 +30,10 @@ reports:
   scores: report/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
+
+mlflow_config:
+  artifact_dir: Artifact
+  experiment_name: ElasticRegression 
+  run_name: mlops
+  registered_model_name:  Elasticnetmodel
+  remote_server_uri: http://localhost:1234
