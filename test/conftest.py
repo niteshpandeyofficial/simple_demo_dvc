@@ -1,4 +1,3 @@
-from msilib import schema
 import yaml
 import os
 import json
